@@ -1,0 +1,1 @@
+aws s3 cp ./index.html s3://catalystcode.io/ --cache-control max-age=604800 --metadata-directive REPLACE $@
