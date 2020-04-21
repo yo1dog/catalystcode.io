@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>catalyst.code</title>
+  <style>
+    @font-face {
+      font-family: 'Comfortaa';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url(fonts/Comfortaa-400-subset.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'Comfortaa';
+      font-style: normal;
+      font-weight: 700;
+      font-display: block;
+      src: url(fonts/Comfortaa-700-subset.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 300;
+      font-display: block;
+      src: local('Open Sans Light'), local('OpenSans-Light'), url(fonts/OpenSans-300-latin.woff2) format('woff2');
+    }
+    @font-face {
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url(fonts/PlayfairDisplay-400-subset.woff2) format('woff2');
+    }
+    
+    body {
+      background-color: black;
+      color: white;
+      font-size: 15pt;
+      font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+      
+      display: grid;
+      grid-template-rows: auto minmax(min-content, 50%) 30%;
+      height: 100vh;
+      max-height: -webkit-fill-available;
+      max-height: -moz-available;
+      max-height: stretch;
+      margin: 0pt;
+    }
+    .header {
+      place-self: center left;
+      padding: 20pt;
+      margin-left: 2%;
+    }
+    .main {
+      place-self: center center;
+      padding: 20pt;
+      width: 75%;
+    }
+    .footer {
+      place-self: center center;
+      padding: 20pt;
+    }
+    
+    .logo {
+      font-size: 200%;
+      font-weight: 700;
+    }
+    .word, .part {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .word {
+      font-size: 150%;
+    }
+    .part {
+      margin-left: 8pt;
+    }
+    .syllables, .definitions {
+      font-family: 'Open Sans', sans-serif;
+    }
+    .syllables {
+      font-size: 75%;
+    }
+    .definitions {
+      font-weight: 300;
+    }
+    .oomph {
+      color: yellow;
+    }
+    .email {
+      color: inherit;
+      text-decoration: none;
+    }
+    .email:hover .hello {
+      color: yellow;
+      transition: color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="logo">catalyst.code</span>
+  </div>
+  <div class="main">
+    <span class="word">catalyst</span> <span class="part">noun</span><br>
+    <span class="syllables">cat·​a·​lyst</span>
+    <ol class="definitions">
+      <li>
+        an agent that provokes or speeds
+        <span class="oomph">significant change</span>
+        or action
+      </li>
+      <li>
+        substance that enables reactions at a faster rate or under
+        <span class="oomph">otherwise impossible conditions</span>
+      </li>
+    </ol>
+  </div>
+  <div class="footer">
+    <a class="email" href="mailto:hello@catalystcode.io"><span class="hello">hello</span>@catalystcode.io</a>
+  </div>
+</body>
+</html>
