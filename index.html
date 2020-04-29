@@ -45,17 +45,24 @@
     
     body {
       background-color: black;
+      background-image: linear-gradient(120deg, rgb(24, 24, 24) 0%, black 80%);
+      background-attachment: fixed;
       color: white;
       font-size: 15pt;
-      font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
-      
-      display: grid;
-      grid-template-rows: auto minmax(min-content, 50%) 30%;
+      font-family: 'Open Sans', sans-serif;
       height: 100vh;
       max-height: -webkit-fill-available;
       max-height: -moz-available;
       max-height: stretch;
-      margin: 0pt;
+      margin: 0;
+    }
+    .container {
+      position: relative;
+      display: grid;
+      grid-template-rows: auto minmax(min-content, 50%) 30%;
+      max-width: 1000pt;
+      margin: 0pt auto;
+      height: 100%;
     }
     .header {
       place-self: center left;
@@ -73,6 +80,7 @@
     }
     
     .logo {
+      font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
       font-size: 200%;
       font-weight: 700;
     }
@@ -84,9 +92,6 @@
     }
     .part {
       margin-left: 8pt;
-    }
-    .sounds, .definitions {
-      font-family: 'Open Sans', sans-serif;
     }
     .sounds {
       font-size: 75%;
@@ -101,6 +106,7 @@
       color: yellow;
     }
     .email {
+      font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
       color: inherit;
       text-decoration: none;
     }
@@ -108,29 +114,54 @@
       color: yellow;
       transition: color 0.5s ease;
     }
+    
+    .watermark-container {
+      position: absolute;
+      width: 500pt;
+      max-width: 90%;
+    }
+    .watermark {
+      position: absolute;
+      z-index: -1;
+      font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 15pt;
+      width: 100%;
+      fill: #0F0F0F;
+      left: -10%;
+      pointer-events: none;
+      user-select: none;
+    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <span class="logo">catalyst.code</span>
-  </div>
-  <div class="main">
-    <span class="word">catalyst</span> <span class="part">noun</span><br>
-    <span class="sounds">cat·​a·​lyst <span class="spacer">|</span> \ 'ka-tә-lәst \</span>
-    <ol class="definitions">
-      <li>
-        an agent that provokes or speeds
-        <span class="oomph">significant change</span>
-        or action
-      </li>
-      <li>
-        substance that enables reactions at a faster rate or under
-        <span class="oomph">otherwise impossible conditions</span>
-      </li>
-    </ol>
-  </div>
-  <div class="footer">
-    <a class="email" href="mailto:hello@catalystcode.io"><span class="hello">hello</span>@catalystcode.io</a>
+  <div class="container">
+    <div class="header">
+      <span class="logo">catalyst.code</span>
+    </div>
+    <div class="main">
+      <span class="word">catalyst</span> <span class="part">noun</span><br>
+      <span class="sounds">cat·​a·​lyst <span class="spacer">|</span> \ 'ka-tә-lәst \</span>
+      <ol class="definitions">
+        <li>
+          an agent that provokes or speeds
+          <span class="oomph">significant change</span>
+          or action
+        </li>
+        <li>
+          substance that enables reactions at a faster rate or under
+          <span class="oomph">otherwise impossible conditions</span>
+        </li>
+      </ol>
+    </div>
+    <div class="footer">
+      <a class="email" href="mailto:hello@catalystcode.io"><span class="hello">hello</span>@catalystcode.io</a>
+    </div>
+    <div class="watermark-container">
+      <svg class="watermark" viewBox="0 0 24 13">
+        <text x="0" y="12">cc</text>
+      </svg>
+    </div>
   </div>
 </body>
 </html>
